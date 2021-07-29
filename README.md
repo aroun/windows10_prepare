@@ -21,6 +21,23 @@ __Important:__ This procedure cannot be reverted without reinstalling Windows. D
 
 You're doing this at your own risk, I am not responsible for any data loss or damage that may occur.
 
+
+## Полное удаление всех метро-приложений и самого магазина в Windоws 10  
+
+(команды вводятся поочерёдно в PowerShell запущенный от Админа):
+ 
+Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
+Get-AppxPackage | Remove-AppxPackage
+ 
+Внимание! Операция необратимая!
+Для возврата придётся восстанавливать систему из образа или переустанавливать с нуля!
+ 
+Как восстановить удалённый Магазин:
+http://winaero.com/blog/how-to-restore-windows-store-in-windows-10-after-removing-it-with-powershell/
+
+
+
+
 Let's start.
 
 ## Do not use the default settings
