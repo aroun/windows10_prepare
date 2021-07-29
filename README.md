@@ -452,6 +452,35 @@ del /F /Q "C:\Windows\System32\Tasks\Microsoft\Windows\SettingSync\*"
 ```
 Some of these may not exist, it's fine.
 
+
+
+### How to Disable OneDrive in Windows 10
+
+This article explains how to disable OneDrive from Windows 10.
+
+You'll need to determine whether you're running the 32 or 64-bit version of Windows 10. If you're unsure which one you're running, launch the Settings app and head to the "System" section. Under "System Type", the version is displayed.
+
+
+Details
+
+1. Open an elevated command prompt window (open the Start menu and type cmd, then right-click the result and click Run as Administrator)
+
+2. In the command prompt window, type the following command and hit Enter:
+
+```taskkill /f /im OneDrive.exe```
+
+3. Next, type one of the following commands and hit Enter, depending on which version of Windows you have:
+
+Windows 10 x64:
+
+```%SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall```
+
+Windows 10 x32:
+
+```%SystemRoot%\System32\OneDriveSetup.exe /uninstall```
+
+OneDrive is now disabled. 
+
 ## Last touches
 We must disable Windows Spotlight, and other "Suggestions" (literal ads).
 
